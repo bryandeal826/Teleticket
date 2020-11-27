@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pagina Web</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> 
+
+	<script src="https://kit.fontawesome.com/7318f088f4.js" 
+	crossorigin="anonymous"></script>
+
+	<style type="text/css">
+		
+
+		img:hover{
+			opacity: 1.0;
+		}
+
+		img.marco{
+			opacity: 0.5;
+			border: 3px solid #AAAAAA;
+			border-radius: 10px;
+			padding: 5px;
+			padding-bottom: 10px; 
+		}
+
+		img.marco:hover{
+			opacity: 1.0;
+			box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.3);
+		}
+
+		.blur {-webkit-filter:blur(4px); filter: blur(4px); }
+		.brightness {-webkit-filter: brightness(250%);brightness(250%);}
+		.contrast {-webkit-filter: contrast(180%);contrast(180%);}
+		.grayscale {-webkit-filter: grayscale(100%);grayscale(100%);}
+		.huerotate {-webkit-filter: hue-rotate(180deg);hue-rotate(180deg);}
+		.invert  {-webkit-filter: invert(100%);invert(100%);}
+		.opacity {-webkit-filter: opacity(50%);opacity(50%);}
+		.saturate {-webkit-filter: saturate(7);saturate(7);}
+		.sepia {-webkit-filter: sepia(100%);sepia(100%);}
+		.shadow {-webkit-filter: drop-shadow(8px 8px 10px green);drop-shadow(8px 8px 10px green);}
+
+		div.trn{
+			width: 100px;
+			height: 100px;
+			background: red;
+			transition: width 5s, height 5s, transform 5s;
+		}
+
+		div.trn:hover{
+			width: 300px;
+			height: 300px;
+			transform: rotate(90deg);
+			animation-name: anima;
+			animation-duration: 5s;
+		}
+
+		@keyframes anima{
+			from{background-color: red}
+			to{background-color: blue}
+
+		}
+	</style>
+	 
+
+</head>
+<body>
+	<!--Cabecera-->
+	<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+		<div class="container">
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavBar">
+      		<span class="navbar-toggler-icon"></span>
+    		</button>    
+
+			<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 logo">
+				<a class="navbar-brand" href="pagina.html">
+    			<img src="images/logo-teleticket.png">
+    		</a>
+			</div>
+			
+
+    		<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 custom-search-form">
+    			<div class="input-group">
+					<input type="text" class="form-control" placeholder="Buscar..." id="search" title autocomplete="off">
+						<span class="input-group-btn">
+							<button class="btn btn-danger" type="button">
+							
+								<i class="fas fa-search"></i>
+						
+							</button>
+						</span>
+				</div>
+    		</div>
+
+    		<div class="col-sm-1 col-md-1 col-lg-1 col-xl-1 login"></div>
+
+
+		  	<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 login">
+		  		<div class="collapse navbar-collapse" id="collapsibleNavBar">
+      			<ul class="navbar-nav" align="center">
+        		<li class="nav-item active">
+          		<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        		</li>
+       			<li class="nav-item">
+          		<a class="nav-link" href="#">Ingresar</a>
+       			</li>
+       			<li class="nav-item">
+          		<a class="nav-link" href="#">Registrate</a>
+        		</li>
+      			</ul>
+    			</div>
+		  	</div>
+    
+		</div>
+    
+  </nav>
+
+  <!---->
+
+  <div  style= "background-image: url(images/f1.jpg);">
+
+  	<div class="container">
+  		<div class="row">
+  			<div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9  p_lr slide_img">
+  				<div id="demo" class="carousel" data-ride="carousel">
+					<ul class="carousel-indicators">
+						<li data-target="#demo" data-slide-to="0" class="active"></li>
+						<li data-target="#demo" data-slide-to="1"></li>
+						<li data-target="#demo" data-slide-to="2"></li>
+						<li data-target="#demo" data-slide-to="3"></li>
+						<li data-target="#demo" data-slide-to="4"></li>
+						<li data-target="#demo" data-slide-to="5"></li>
+						<li data-target="#demo" data-slide-to="6"></li>
+					</ul>
+					<div class="carousel-inner">
+					<div class="carousel-item active">
+
+						<div class="carousel-caption">
+							<div class="row">
+							<div class="col-sm-7 col-sx-12" style="padding-left: 45px;">
+							<h2>
+								<a href="#" style="color: white">GUNS N´ROSES</a>
+							</h2>
+							<p class="hidden-xs">ESTADIO SAN MARCOS -</p>
+							</div>
+							<div class="col-sm-5 col-xs-12 fecha" style="padding-right: 45px;">
+								<div>02 de mayo</div>
+								
+							</div>
+							</div>
+
+						</div>
+
+						<img src="images/gun.jpg" width="100%">
+					</div>
+					<div class="carousel-item">
+						<img src="images/kizz.jpg" width="100%">
+					</div>
+					<div class="carousel-item">
+						<img src="images/agua.jpg" width="100%">
+					</div>
+					<div class="carousel-item">
+						<img src="images/tokio.jpg" width="100%">
+					</div>
+					<div class="carousel-item">
+						<img src="images/harry.jpg" width="100%">
+					</div>
+					<div class="carousel-item">
+						<img src="images/andres.jpg" width="100%">
+					</div>
+					<div class="carousel-item">
+						<img src="images/piaf.jpg" width="100%">
+					</div>
+					</div>
+					<a class="carousel-control-prev" href="#demo" data-slide="prev">
+						<span class="carousel-control-prev-icon"></span>
+					</a>
+					<a class="carousel-control-next" href="#demo" data-slide="next">
+						<span class="carousel-control-next-icon"></span>
+					</a>
+				</div>
+  			</div>
+
+  		<div class="col-0 col-sm-0 col-md-3 col-lg-3 col-xl-3 slide_pagination hidden-sm hidden-xs">
+  			<div style="border: 1px solid red">
+  				<ul class="listado">
+  					<li>
+  						<a href="#" style="color: white">GUNS ´N ROSES
+  						</a>
+  					</li>
+  					<li>
+  						<a href="#" style="color: white">KISS
+  						</a>
+  					</li>
+  					<li>
+  						<a href="#" style="color: white">CUMBIA CON AGUA MARINA
+  						</a>
+  					</li>
+  					<li>
+  						<a href="#" style="color: white">TOKIO HOTEL
+  						</a>
+  					</li>
+  					
+  					<li>
+  						<a href="#" style="color: white">HARRY STYLES - LOVE ON TOUR 2020</a>
+  					</li>
+  					<li>
+  						<a href="#" style="color: white">ANDRES CALAMARO GIRA CARGAR LA SUERTE</a>
+  					</li>
+  					<li>
+  						<a href="#" style="color: white">PIAF! THE SHOW</a>
+  					</li>		
+  				</ul>
+  			</div>
+		</div>
+
+  		</div>
+  		
+
+  
+  	</div>
+  </div>
+
+  <nav class="navbar navbar-expand-sm navbar-danger bg-danger">
+  	<div class="container">
+
+  		<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+  		<div class="btn-group btn-group-lg btn-block">
+		<button type="button" class="btn btn-danger">DESTACADOS</button>
+		<button type="button" class="btn btn-danger">TODOS</button>
+		<button type="button" class="btn btn-danger">NUEVOS</button>
+		<div class="btn-group btn-group-lg">
+			<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+				CATEGORIA
+			</button>
+			<div class="dropdown-menu bg-danger">
+				<a class="dropdown-item" style="color: white" href="#">CONVIERTOS</a>
+				<a class="dropdown-item" style="color: white" href="#">DEPORTE</a>
+				<a class="dropdown-item" style="color: white" href="#">TEATRO</a>
+				<a class="dropdown-item" style="color: white" href="#">ENTRETENIMIENTO</a>
+			</div>
+		</div>
+
+	</div>
+	</div>
+
+  	</div>
+  </nav>
+<br>
+
+  <div class="container">
+  	
+  		<div class="row">
+  			<div class="col-sm-9 col-md-9 col-lg-9 col-xl-9">
+  		
+  			<div class="row">
+  				<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+  					<img class="marco" src="images/11.jpg" >
+  				</div>
+  				<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+  					<img class="marco" src="images/11.jpg" >
+  				</div>
+  				<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+  					<img class="marco" src="images/11.jpg" >
+  				</div>
+  	
+  				<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+  					<img class="marco" src="images/11.jpg" >
+  				</div>
+  				<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+  					<img class="marco" src="images/11.jpg" >
+  				</div>
+  				<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+  					<img class="marco" src="images/11.jpg" >
+  				</div>
+
+  				<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+  					<img class="marco" src="images/11.jpg" >
+  				</div>
+  				<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+  					<img class="marco" src="images/11.jpg" >
+  				</div>
+  				<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+  					<img class="marco" src="images/11.jpg" >
+  				</div>
+
+  				<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+  					<img class="marco" src="images/11.jpg" >
+  				</div>
+  				<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+  					<img class="marco" src="images/11.jpg" >
+  				</div>
+  				<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+  					<img class="marco" src="images/11.jpg" >
+  				</div>
+
+  				<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+  					<img class="marco" src="images/11.jpg" >
+  				</div>
+  				<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+  					<img class="marco" src="images/11.jpg" >
+  				</div>
+  				<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+  					<img class="marco" src="images/11.jpg" >
+  				</div>
+
+  				<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+  					<img class="marco" src="images/11.jpg" >
+  				</div>
+  				<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+  					<img class="marco" src="images/11.jpg" >
+  				</div>
+  				<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+  					<img class="marco" src="images/11.jpg" >
+  				</div>
+
+  				<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+  					<img class="marco" src="images/11.jpg" >
+  				</div>
+  				<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+  					<img class="marco" src="images/11.jpg" >
+  				</div>
+  				<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+  					<img class="marco" src="images/11.jpg" >
+  				</div>
+
+  				<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+  					<img class="marco" src="images/11.jpg" >
+  				</div>
+  				<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+  					<img class="marco" src="images/11.jpg" >
+  				</div>
+  				<div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
+  					<img class="marco" src="images/11.jpg" >
+  				</div>
+  			
+			</div>
+  		</div>
+
+  		<div class=" col-md-3 col-lg-3 col-xl-3">
+  			<img src="images/cruz.jpg" >
+  			<img src="images/comercio.png" >
+  			<img src="images/tlk.jpg" >
+  			<img src="images/vende.jpg" >
+  		</div>
+
+
+  	</div>
+  	<br>
+  
+  	</div>
+
+  	<div class="jumbotron jumbotron-fluid bg-dark text-white">
+
+  		<div class="container">
+  			<div  class="row">
+  				<div class="col-sm-8 col-lg-8">
+  					<div class="row">
+  						<div class="col-sm-3 col-lg-3">
+  					
+						<a class="navbar-brand" href="#">
+    					<img src="images/punto.png " class="img-responsive" width="130%">
+    					</a>
+					</div>
+
+					<div class="col-sm-3 col-lg-3">
+  					
+						<a class="navbar-brand" href="#">
+    					<img src="images/libro.png " class="img-responsive" width="130%">
+    					</a>
+					</div>
+
+					<div class="col-sm-3 col-lg-3">
+  					
+						<a class="navbar-brand" href="#">
+    					<img src="images/datos.png " class="img-responsive" width="130%">
+    					</a>
+					</div>
+
+					<div class="col-sm-3 col-lg-3">
+  					
+						<a class="navbar-brand" href="#">
+    					<img src="images/rimac.png " class="img-responsive" width="130%">
+    					</a>
+					</div>
+
+  					</div>
+
+  					
+
+  			</div>
+
+  			<div class="col-sm-4 col-lg-4">
+  				<a class="btn btn-default" style="color: white; border: 3px solid white " href="#">Módulo promotores</a>
+  				<p>SERVICIO AL CLIENTE</p>
+  				<p>
+  					<strong>Horario de atención: </strong>Lunes a Sábado de 9:00 am a 7:00 pm
+  				</p>
+  				<p>
+  					<strong>
+  						E-mail: 
+  				    </strong> 
+  				    <a href="mailto:servicioalcliente@teleticket.com.pe">servicioalcliente@teleticket.com.pe</a>
+  				</p>
+
+  				<p><strong>Call Center: </strong> <a href="tel:+5117058206">+511 705 8206</a></p>
+
+  			</div>
+
+
+
+  					
+			
+  				</div>
+  					
+  			</div>
+			
+		</div>
+  		</div>
+		
+	</div>
+  </div>
+
+  
+
+  
+
+  
+
+</body>
+</html>
